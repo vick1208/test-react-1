@@ -37,7 +37,8 @@ function ProductPage() {
                             {product.description}
                         </CardProduct.Body>
                         <CardProduct.Footer price={product.price} />
-                    </CardProduct>))
+                    </CardProduct>
+                ))
             }
 
         </div>

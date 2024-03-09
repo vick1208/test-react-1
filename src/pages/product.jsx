@@ -23,6 +23,16 @@ const products = [
         sit amet consectetur adipisicing elit. 
         `
     },
+    {
+        id: 3,
+        name: "Kaos Joger",
+        price: "Rp. 252.000",
+        image: "/img/black-tee.jpg",
+        description: `Ini adalah
+        sample kaos Joger.
+        Joger jelek 
+        `
+    },
 ];
 
 

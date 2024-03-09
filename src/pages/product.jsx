@@ -17,7 +17,7 @@ const products = [
     {
         id: 2,
         name: "Kaos Lama",
-        price: "Rp. 302.000",
+        price: "Rp. 222.000",
         image: "/img/black-tee.jpg",
         description: `Lorem ipsum dolor 
         sit amet consectetur adipisicing elit. 
@@ -31,14 +31,14 @@ function ProductPage() {
         <div className="flex justify-center py-5">
             {
                 products.map((product) => (
-                <CardProduct key={product.id}>
-                    <CardProduct.Header image={product.image} />
-                    <CardProduct.Body name={product.name}>
-                        {product.description}
-                    </CardProduct.Body>
-                    <CardProduct.Footer price={product.price} />
-                </CardProduct>)
-                )}
+                    <CardProduct key={product.id}>
+                        <CardProduct.Header image={product.image} />
+                        <CardProduct.Body name={product.name}>
+                            {product.description}
+                        </CardProduct.Body>
+                        <CardProduct.Footer price={product.price} />
+                    </CardProduct>))
+            }
 
         </div>
     );

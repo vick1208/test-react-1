@@ -4,7 +4,6 @@ const RegisterPage = () => {
     return (
         <AuthLayout title="Register" type="register">
             <FormRegister />
-            
         </AuthLayout>
     );
 }

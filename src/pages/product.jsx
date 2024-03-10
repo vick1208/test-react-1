@@ -1,5 +1,6 @@
 import Button from "../components/Elements/Buttons";
 import CardProduct from "../components/Fragments/CardProduct";
+import Counter from "../components/Fragments/Counter";
 
 
 
@@ -49,7 +50,7 @@ function ProductPage() {
     return (
 
         <>
-            <div className="flex justify-end h-20 bg-blue-600 text-white items-center px-10">
+            <div className="flex justify-end h-12 bg-blue-600 text-white items-center px-10">
                 {email}
                 <Button classname="ml-5 bg-black" onClick={handleLogout}>Logout</Button>
             </div>
@@ -65,7 +66,9 @@ function ProductPage() {
                         </CardProduct>
                     ))
                 }
-
+            </div>
+            <div className="flex  justify-center">
+                <Counter/>
             </div>
         </>
     );

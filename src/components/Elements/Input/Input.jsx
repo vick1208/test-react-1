@@ -1,7 +1,9 @@
+import { forwardRef } from "react"
+
 /*
 eslint-disable react/prop-types 
 */
-const Input = (props) => {
+const Input = forwardRef (function Input(props,ref){
     const { type,placeholder,name } = props;
     return (
         <input
@@ -10,8 +12,9 @@ const Input = (props) => {
             placeholder={placeholder}
             name={name}
             id={name}
+            ref={ref}
         />
-    );
-}
+    )
+});
 
 export default Input

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "../components/Elements/Buttons";
 import CardProduct from "../components/Fragments/CardProduct";
 
@@ -42,17 +42,17 @@ function ProductPage() {
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    setCart(JSON.parse(localStorage.getItem("cart"))|| []);
+    setCart(JSON.parse(localStorage.getItem("cart")) || []);
   }, []);
 
   useEffect(() => {
-    if(cart.length>0){
-        const sum = cart.reduce((acc, item) => {
-          const product = products.find((product) => product.id == item.id);
-          return acc + product.price * item.qty;
-        }, 0);
-        setTotalPrice(sum);
-        localStorage.setItem("cart", JSON.stringify(cart));
+    if (cart.length > 0) {
+      const sum = cart.reduce((acc, item) => {
+        const product = products.find((product) => product.id == item.id);
+        return acc + product.price * item.qty;
+      }, 0);
+      setTotalPrice(sum);
+      localStorage.setItem("cart", JSON.stringify(cart));
     }
   }, [cart]);
 
@@ -79,6 +79,18 @@ function ProductPage() {
       ]);
     }
   };
+
+
+  // useRef
+  
+  const totalPriceRef = useRef(null);
+  useEffect(()=>{
+    if (cart.length > 0) {
+      totalPriceRef.current.style.display = "table-row";
+    }else{
+      totalPriceRef.current.style.display = "none";
+    }
+  },[cart]);
 
   return (
     <>
@@ -141,7 +153,7 @@ function ProductPage() {
                   </tr>
                 );
               })}
-              <tr>
+              <tr ref={totalPriceRef}>
                 <td colSpan={"3"}>Price</td>
                 <td>
                   Rp{" "}

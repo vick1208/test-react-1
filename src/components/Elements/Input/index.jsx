@@ -12,6 +12,5 @@ const InputForm = forwardRef(function InputForm(props, ref) {
     )
 })
 
-// InputForm.displayName = "InputForm"
 
 export default InputForm

@@ -1,8 +1,6 @@
 import { forwardRef } from "react"
 
-/*
-eslint-disable react/prop-types 
-*/
+
 const Input = forwardRef (function Input(props,ref){
     const { type,placeholder,name } = props;
     return (

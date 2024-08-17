@@ -1,6 +1,4 @@
-/*
-eslint-disable react/prop-types 
-*/
+
 const Button = (props) => {
     const { classname = "bg-black", children, onClick = () => { }, type = "button" } = props;
     return (

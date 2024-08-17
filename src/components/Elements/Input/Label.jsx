@@ -1,6 +1,4 @@
-/*
-eslint-disable react/prop-types 
-*/
+
 
 const Label = (props) => {
 

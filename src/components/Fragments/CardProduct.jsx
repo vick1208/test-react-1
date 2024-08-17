@@ -1,6 +1,4 @@
-/*
-eslint-disable react/prop-types 
-*/
+
 import Button from "../Elements/Buttons";
 
 const CardProduct = (props) => {

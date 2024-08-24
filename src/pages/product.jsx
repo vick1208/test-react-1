@@ -114,7 +114,7 @@ function ProductPage() {
                   <tr key={item.id}>
                     <td>{product.title.substring(0,10)}...</td>
                     <td>
-                    £{" "}
+                    ${" "}
                       {product.price.toLocaleString("id-ID", {
                         styles: "currency",
                         currency: "IDR",
@@ -122,7 +122,7 @@ function ProductPage() {
                     </td>
                     <td>{item.qty}</td>
                     <td>
-                    £{" "}
+                    ${" "}
                       {(item.qty * product.price).toLocaleString("id-ID", {
                         styles: "currency",
                         currency: "IDR",
@@ -134,7 +134,7 @@ function ProductPage() {
               <tr ref={totalPriceRef} className="font-bold">
                 <td colSpan={"3"}>Price</td>
                 <td>
-                  £{" "}
+                  ${" "}
                   {totalPrice.toLocaleString("id-ID", {
                     styles: "currency",
                     currency: "IDR",
